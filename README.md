@@ -15,9 +15,13 @@
 * `cd image` 
 * `docker build -t docker-image:<image_name> .` 
 * `docker run -d -p 9000:8080 -v $(pwd)/src:/var/task --name <container_name> docker-image:<image_name>`  
-> To see changes reflected in code after starting container, run the below two 
-* `docker container restart <container_name> && curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'` 
-
+### To view logs real-time
+> Open new terminal side-by-side with main
+* `docker logs -f <container_name>` 
+### To SAVE AND RUN:
+* `docker container restart <container_name> && sleep 2 && curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'` 
+### TO SAVE CHANGES
+* `docker container restart <container_name>` 
 
 
 ### Deploying to lambda
