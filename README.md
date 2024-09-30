@@ -23,7 +23,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 - Use ec2 for stuff you couldn't serve locally on your mac air even if you wanted to
 
 ## Working notes
-- this was created with <cdk init app --language typescript>
+* `cdk init app --language typescript` to create this file and directory from scratch (bare bones, less clear)
 - Amazon CDK creates a node-like project with abstractions to interact with their services in the cloud easier
 - Use <lib> to define infrastructure selections like timeouts, runtimes, etc
 - The image/src was created by us, and that's where you write your python and docker scripts
