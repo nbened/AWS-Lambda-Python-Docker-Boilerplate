@@ -39,7 +39,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ### Deploying to lambda
 * `aws sts get-caller-identity`   sanity check for aws cli setup, should give you a json 3 lines deep if configured right
 * `cd ..`   return to cdk project directory
-* `cdk bootstrap --region us-central`   return to cdk project directory
+* `cdk bootstrap --region us-east-2`   return to cdk project directory
 > click yes to deploy
 * `cdk deploy.`   return to cdk project directory
 > click link to test the function url
