@@ -14,8 +14,8 @@
 ### Testing locally
 * `cd image` 
 * `docker build -t docker-image:<image_name> .` 
+> See changes reflected in code, run `docker container restart <container_name>` to see your changes in container
 * `docker run -d -p 9000:8080 -v $(pwd)/src:/var/task --name <container_name> docker-image:<image_name>`  
-> to make a change reflected, the above container uses volume mounting: run `docker container restart <container_name>` to see your changes 
 > Open new terminal
 * `curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'` 
 
