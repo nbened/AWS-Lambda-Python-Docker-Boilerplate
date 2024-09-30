@@ -38,10 +38,11 @@ Test locally
 
 
 Deploy to Lambda
-1) Sanity check
-    | This should give you a json 3 lines deep if configured right
-    aws sts get-caller-identity
-2) Return to cdk project directory
+* `aws sts get-caller-identity`   sanity check for aws cli setup, should give you a json 3 lines deep if configured right
+* `cd ..`   return to cdk project directory
+
+    
+2) Return
     cd ..
 - cdk bootstrap --region us-central
 - cdk deploy
