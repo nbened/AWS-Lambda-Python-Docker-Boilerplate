@@ -3,6 +3,7 @@
 - Docker Image Deployment: Up to 10 GB for lambda functions
 - Use lambda fortasks less than 15 minutes and don't need a GPU - so anything you're doing on a mac air
 - Use ec2 for stuff you couldn't serve locally on your mac air even if you wanted to
+- Don't discount docker desktop - it's a GUI that can help you keep track of all this, even when you're comfortable with CLI
 
 # Specific notes
 * `cdk init app --language typescript` to create this file and directory from scratch (bare bones, less clear)
@@ -29,12 +30,11 @@
 ## Deploying to lambda
 * `cd ..`   return to cdk project directory
 * `aws sts get-caller-identity`   sanity check for aws cli setup, should give you a json 3 lines deep if configured right
-* `cdk bootstrap --region us-east-2`   return to cdk project directory
+* `cdk bootstrap --region us-east-2`   build infrastructure needed
 > click yes to deploy
-* `cdk deploy.`   return to cdk project directory
+* `cdk deploy.`   deploy to 
 > click link to test the function url
-
-
+* NOTE- any updates just need `cdk deploy.` no need to rebuild anything in docker
 
 
 
@@ -47,6 +47,14 @@
 
 
 ---
+
+# How to set this up on your machine 
+* clone this repo `git clone https://github.com/nbened/AWS-Lambda-Python-Docker-Boilerplate.git` 
+* rename your project`mv AWS-Lambda-Python-Docker-Boilerplate <custom_project_name> ` 
+* navigate to your root o `cd <custom_project_name>` 
+* install npm packages to your local directory `npm install` 
+
+--- 
 
 # Welcome to your CDK TypeScript project
 
