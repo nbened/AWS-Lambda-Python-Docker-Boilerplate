@@ -13,6 +13,7 @@
 
 ---
 ## Testing locally
+> Quick note: this is good for testing your function, but if you're just messing with a script and preppign, do that elsewhere. When it's ready to become a function, then incorporate this - otherwise your dev iteration loop takes a hit not really for a reason. 
 * `cd image` 
 * `docker build -t docker-image:<image_name> .` 
 * `docker run -d -p 9000:8080 -v $(pwd)/src:/var/task --name <container_name> docker-image:<image_name>`  
