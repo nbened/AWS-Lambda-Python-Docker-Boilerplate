@@ -40,12 +40,9 @@ Test locally
 Deploy to Lambda
 * `aws sts get-caller-identity`   sanity check for aws cli setup, should give you a json 3 lines deep if configured right
 * `cd ..`   return to cdk project directory
-
-    
-2) Return
-    cd ..
-- cdk bootstrap --region us-central
-- cdk deploy
+* `cdk bootstrap --region us-central`   return to cdk project directory
 > click yes to deploy
-- click link to test the function url
+* `cdk deploy.`   return to cdk project directory
+> click link to test the function url
+
 
