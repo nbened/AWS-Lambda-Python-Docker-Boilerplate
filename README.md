@@ -29,20 +29,17 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 - The image/src was created by us, and that's where you write your python and docker scripts
 - this build was made using this video <https://www.youtube.com/watch?v=wbsbXfkv47A>
 
-Test locally
-- cd image
-- docker build -t docker-image:<build_name> .
-- docker run -p 9000:8080 docker-image:<build_name>
+### Testing locally
+* `cd image` 
+* `docker build -t docker-image:<build_name> .` 
+* `docker run -p 9000:8080 docker-image:<build_name>` 
 > Open new terminal
-- curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
+* `curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'` 
 
-
-Deploy to Lambda
+### Deploying to lambda
 * `aws sts get-caller-identity`   sanity check for aws cli setup, should give you a json 3 lines deep if configured right
 * `cd ..`   return to cdk project directory
 * `cdk bootstrap --region us-central`   return to cdk project directory
 > click yes to deploy
 * `cdk deploy.`   return to cdk project directory
 > click link to test the function url
-
-
