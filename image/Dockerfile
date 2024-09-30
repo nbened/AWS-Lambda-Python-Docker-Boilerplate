@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 COPY src/* ${LAMBDA_TASK_ROOT}
 
 # Set the CMD to your handler
-CMD ["main.handler"]
+CMD ["app.handler"]

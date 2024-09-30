@@ -15,16 +15,19 @@
 ---
 ## Testing locally
 > Quick note: this is good for testing your function, but if you're just messing with a script and preppign, do that elsewhere. When it's ready to become a function, then incorporate this - otherwise your dev iteration loop takes a hit not really for a reason. 
-* `cd image` 
-* `docker build -t docker-image:<image_name> .` 
-* `docker run -d -p 9000:8080 -v $(pwd)/src:/var/task --name <container_name> docker-image:<image_name>`  
+* ` cd image ` 
+* ` docker build -t docker-image:<image_name> . ` 
+* ` docker run -d -p 9000:8080 -v $(pwd)/src:/var/task --name <container_name> docker-image:<image_name> `  
 ### To view logs real-time
 > Open new terminal side-by-side with main
 * `docker logs <container_name>` 
 ### To SAVE AND RUN:
-* `docker container restart <container_name> && sleep 2 && curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'` 
+* ` docker container restart <container_name> && sleep 2 && curl "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{"arg1": 1, "arg2": 2}' ` 
 ### TO SAVE CHANGES
-* `docker container restart <container_name>` 
+* ` docker container restart <container_name> ` 
+
+## Testing python locally
+- it's recommended to just ` cd src ` and run ` python3 main.py `. focus on gettignt he script down. then worry about making it a working function
 ---
 
 ## Deploying to lambda
