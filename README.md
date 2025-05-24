@@ -34,6 +34,8 @@
 * `cd ..`   return to cdk project directory
 * `aws sts get-caller-identity`   sanity check for aws cli setup, should give you a json 3 lines deep if configured right
 * `cdk bootstrap --region us-east-1`   build infrastructure needed - can change region to us-east-2 to seperate from GUI functions
+> if first time, run this to generate a stack to deploy:
+* `cdk synth` to generate stack that will be launched
 > click yes to deploy
 * `cdk deploy.`   deploy to 
 > click link to test the function url
