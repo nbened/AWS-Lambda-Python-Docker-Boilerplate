@@ -37,7 +37,7 @@
 > if first time, run this to generate a stack to deploy:
 * `cdk synth` to generate stack that will be launched
 > click yes to deploy
-* `cdk deploy.`   deploy to 
+* `cdk deploy`   deploy to 
 > click link to test the function url
 * NOTE- any updates just need `cdk deploy.` no need to rebuild anything in docker
 
